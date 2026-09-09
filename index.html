@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="description" content="A clean real-time digital clock built with HTML, CSS, and JavaScript." />
+  <title>Digital Clock | Ashish Ranjan</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="bodyContainer">
+    <section class="clockCard" aria-labelledby="clockTitle">
+      <p class="eyebrow">LOCAL TIME</p>
+      <h1 id="clockTitle">Digital Clock</h1>
+      <p class="dateDisplay" id="dateDisplay">Loading date...</p>
+      <div class="clockContainer" aria-live="polite">
+        <div class="timeUnit"><div class="timeNumber hoursNumber">00</div><div class="timeLabel">Hours</div></div>
+        <span class="separator">:</span>
+        <div class="timeUnit"><div class="timeNumber minutesNumber">00</div><div class="timeLabel">Minutes</div></div>
+        <span class="separator">:</span>
+        <div class="timeUnit"><div class="timeNumber secondsNumber">00</div><div class="timeLabel">Seconds</div></div>
+      </div>
+      <label class="timezonePicker" for="timezoneSelect">
+        <span>Timezone</span>
+        <select id="timezoneSelect" aria-label="Select timezone"></select>
+      </label>
+      <p class="timezone" id="timezoneDisplay">Your device timezone</p>
+    </section>
+    <footer>Built with HTML, CSS and JavaScript · <a href="https://www.ashishranjan.net/" target="_blank" rel="noreferrer">Ashish Ranjan</a></footer>
+  </main>
+</body>
+</html>
+
+
