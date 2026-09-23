@@ -1,36 +1,117 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080b12" />
-  <meta name="description" content="A clean real-time digital clock built with HTML, CSS, and JavaScript." />
-  <title>Digital Clock | Ashish Ranjan</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <main class="bodyContainer">
-    <section class="clockCard" aria-labelledby="clockTitle">
-      <p class="eyebrow">LOCAL TIME</p>
-      <h1 id="clockTitle">Digital Clock</h1>
-      <p class="dateDisplay" id="dateDisplay">Loading date...</p>
-      <div class="clockContainer" aria-live="polite">
-        <div class="timeUnit"><div class="timeNumber hoursNumber">00</div><div class="timeLabel">Hours</div></div>
-        <span class="separator">:</span>
-        <div class="timeUnit"><div class="timeNumber minutesNumber">00</div><div class="timeLabel">Minutes</div></div>
-        <span class="separator">:</span>
-        <div class="timeUnit"><div class="timeNumber secondsNumber">00</div><div class="timeLabel">Seconds</div></div>
-      </div>
-      <label class="timezonePicker" for="timezoneSelect">
-        <span>Timezone</span>
-        <select id="timezoneSelect" aria-label="Select timezone"></select>
-      </label>
-      <p class="timezone" id="timezoneDisplay">Your device timezone</p>
-    </section>
-    <footer>Built with HTML, CSS and JavaScript · <a href="https://www.ashishranjan.net/" target="_blank" rel="noreferrer">Ashish Ranjan</a></footer>
-  </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#080b12" />
+        <meta
+            name="description"
+            content="A responsive digital clock with live date and timezone selection built with HTML, CSS, and JavaScript."
+        />
+        <meta name="author" content="Ashish Ranjan" />
+        <link rel="icon" href="./public/favicon.ico" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Digital Clock | Ashish Ranjan" />
+        <meta
+            property="og:description"
+            content="A clean real-time digital clock with timezone selection."
+        />
+        <meta
+            property="og:url"
+            content="https://a2rp.github.io/digital-clock-html-css-javascript/"
+        />
+        <meta
+            property="og:image"
+            content="https://a2rp.github.io/digital-clock-html-css-javascript/preview.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Clock | Ashish Ranjan" />
+        <meta
+            name="twitter:description"
+            content="A clean real-time digital clock with timezone selection."
+        />
+        <meta
+            name="twitter:image"
+            content="https://a2rp.github.io/digital-clock-html-css-javascript/preview.png"
+        />
+        <title>Digital Clock | Ashish Ranjan</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header class="siteHeader">
+            <a class="brand" href="./" aria-label="Digital Clock home">
+                <img src="./public/logo.png" alt="Ashish Ranjan logo" />
+                <span>
+                    <strong>Digital Clock</strong>
+                    <small>Live time, anywhere</small>
+                </span>
+            </a>
+            <a
+                class="headerLink"
+                href="https://github.com/a2rp/digital-clock-html-css-javascript"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span aria-hidden="true">◉</span>
+                <span>Source</span>
+            </a>
+        </header>
+
+        <main class="bodyContainer">
+            <section class="clockCard" aria-labelledby="clockTitle">
+                <p class="eyebrow">LOCAL TIME</p>
+                <h1 id="clockTitle">Digital Clock</h1>
+                <p class="dateDisplay" id="dateDisplay">Loading date...</p>
+                <div class="clockContainer" aria-live="polite">
+                    <div class="timeUnit">
+                        <div class="timeNumber hoursNumber">00</div>
+                        <div class="timeLabel">Hours</div>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="timeUnit">
+                        <div class="timeNumber minutesNumber">00</div>
+                        <div class="timeLabel">Minutes</div>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="timeUnit">
+                        <div class="timeNumber secondsNumber">00</div>
+                        <div class="timeLabel">Seconds</div>
+                    </div>
+                </div>
+                <label class="timezonePicker" for="timezoneSelect">
+                    <span>Timezone</span>
+                    <select id="timezoneSelect" aria-label="Select timezone"></select>
+                </label>
+                <p class="timezone" id="timezoneDisplay">Your device timezone</p>
+            </section>
+
+            <footer>
+                <div>
+                    Copyright © <span id="currentYear"></span>
+                    <a
+                        href="https://www.ashishranjan.net/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ashish Ranjan
+                    </a>
+                </div>
+                <nav class="footerLinks" aria-label="Footer links">
+                    <a href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" title="Portfolio">◎</a>
+                    <a href="https://github.com/a2rp" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">◉</a>
+                    <a href="https://codepen.io/ash1198" target="_blank" rel="noopener noreferrer" aria-label="CodePen" title="CodePen">⌘</a>
+                    <a href="https://www.linkedin.com/in/aashishranjan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">in</a>
+                    <a href="https://www.facebook.com/theash.ashish/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">f</a>
+                    <a href="https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">▶</a>
+                    <a href="mailto:ash.ranjan09@gmail.com" aria-label="Email" title="Email">✉</a>
+                    <a href="https://a2rp-donation-page.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Support" title="Support">♥</a>
+                    <a href="https://buymeacoffee.com/a2rp" target="_blank" rel="noopener noreferrer" aria-label="Buy Me a Coffee" title="Buy Me a Coffee">☕</a>
+                    <a href="https://www.patreon.com/a2rp" target="_blank" rel="noopener noreferrer" aria-label="Patreon" title="Patreon">★</a>
+                </nav>
+            </footer>
+        </main>
+
+        <button id="topBtn" class="topBtn" type="button" aria-label="Go to top" title="Go to top">↑</button>
+    </body>
 </html>
-
-

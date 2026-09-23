@@ -1,1 +1,11 @@
-﻿{"name":"digital-clock-html-css-javascript","version":"1.0.0","private":true,"scripts":{"deploy":"gh-pages -d ."},"devDependencies":{"gh-pages":"^6.3.0"}}
+{
+    "name": "digital-clock-html-css-javascript",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "deploy": "gh-pages -d ."
+    },
+    "devDependencies": {
+        "gh-pages": "^6.3.0"
+    }
+}
