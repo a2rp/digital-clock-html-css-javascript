@@ -23,3 +23,11 @@ function updateClock() {
 timezoneSelect.addEventListener("change", updateClock);
 updateClock();
 setInterval(updateClock, 1000);
+
+const yearEl = document.querySelector("#currentYear");
+const topBtn = document.querySelector("#topBtn");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+window.addEventListener("scroll", () => {
+  topBtn?.classList.toggle("show", window.scrollY > 260);
+}, { passive: true });
+topBtn?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
