@@ -19,10 +19,11 @@ HTML, CSS, and JavaScript.
 
 Open `index.html` in a browser or use any local static server.
 
-Deploy to GitHub Pages:
+Build and deploy to GitHub Pages:
 
 ```bash
 npm install
+npm run build
 npm run deploy
 ```
 

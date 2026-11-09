@@ -22,7 +22,7 @@
         />
         <meta
             property="og:image"
-            content="https://a2rp.github.io/digital-clock-html-css-javascript/preview.png"
+            content="https://a2rp.github.io/digital-clock-html-css-javascript/public/preview.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Digital Clock | Ashish Ranjan" />
@@ -32,7 +32,7 @@
         />
         <meta
             name="twitter:image"
-            content="https://a2rp.github.io/digital-clock-html-css-javascript/preview.png"
+            content="https://a2rp.github.io/digital-clock-html-css-javascript/public/preview.png"
         />
         <title>Digital Clock | Ashish Ranjan</title>
         <link rel="stylesheet" href="style.css" />
@@ -60,10 +60,15 @@
 
         <main class="bodyContainer">
             <section class="clockCard" aria-labelledby="clockTitle">
-                <p class="eyebrow">LOCAL TIME</p>
+                <p class="eyebrow">WORLD CLOCK</p>
                 <h1 id="clockTitle">Digital Clock</h1>
                 <p class="dateDisplay" id="dateDisplay">Loading date...</p>
-                <div class="clockContainer" aria-live="polite">
+                <div
+                    class="clockContainer"
+                    role="timer"
+                    aria-label="Current time"
+                    aria-live="off"
+                >
                     <div class="timeUnit">
                         <div class="timeNumber hoursNumber">00</div>
                         <div class="timeLabel">Hours</div>
@@ -112,6 +117,6 @@
             </footer>
         </main>
 
-        <button id="topBtn" class="topBtn" type="button" aria-label="Go to top" title="Go to top">↑</button>
+        <button id="topBtn" class="topBtn" type="button" tabindex="-1" aria-hidden="true" aria-label="Go to top" title="Go to top">↑</button>
     </body>
 </html>

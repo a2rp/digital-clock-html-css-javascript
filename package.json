@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "deploy": "gh-pages -d ."
+        "build": "node scripts/build-site.mjs",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
         "gh-pages": "^6.3.0"
